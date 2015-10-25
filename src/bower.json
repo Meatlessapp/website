@@ -1,0 +1,22 @@
+{
+  "name": "meatless",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Daniel Borlino de Oliveira <daniel.borlino@ingresse.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}
