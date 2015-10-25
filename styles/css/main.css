@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oxygen', sans-serif;
+  padding-top: 60px;
+}
+
+.toolbar {
+  height: 60px;
+  background: #EC9F24;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 200;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  box-shadow: 0 0 5px #CCC;
+  text-shadow: 0 0 1px #9C7014;
+  z-index: 9;
+}
+.toolbar .meatless {
+  font-family: 'Reenie Beanie';
+  text-transform: none;
+  float: left;
+  padding-left: 20px;
+  line-height: 60px;
+  margin: 0px;
+}
+.toolbar ul {
+  list-style: none;
+  text-align: right;
+  margin: 0px;
+}
+.toolbar ul li {
+  display: inline-block;
+  line-height: 60px;
+  padding: 0px 20px;
+}
+.toolbar ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title {
+  font-weight: 100;
+  font-size: 42px;
+}
+
+.meatless-logo {
+  font-family: 'Reenie Beanie';
+  font-size: 62px;
+  margin: 0px;
+}
+.meatless-logo img {
+  height: 100px;
+  position: relative;
+  top: 30px;
+}
+
+.slide {
+  min-height: 100%;
+  border-bottom: 1px solid #000;
+  position: relative;
+  overflow: auto;
+}
+.slide.background1 {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: bottom center;
+}
+.slide.background1 .hand {
+  height: 100%;
+  width: 40%;
+  float: left;
+  background-image: url("../images/meatless-hand-left.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: contain;
+  padding-left: 40%;
+}
+.slide.background1 .content {
+  -webkit-animation: fadeInUp 1s;
+}
+.slide.background-press {
+  background-image: url("../images/background-press.jpg");
+  background-position: bottom center;
+  background-size: 40%;
+  background-repeat: no-repeat;
+}
+.slide .content {
+  padding: 130px 40px 40px 40px;
+  width: 100%;
+  text-align: center;
+}
+.slide .content .title {
+  text-shadow: 0 0 2px #FFF;
+}
+.slide .content .actions {
+  display: block;
+}
+.slide .content .actions a {
+  display: inline-block;
+  height: 40px;
+}
+.slide .content .actions a.comming-soon {
+  opacity: 0.4;
+  cursor: default;
+  position: relative;
+}
+.slide .content .actions a.comming-soon:after {
+  content: "Em breve";
+  position: absolute;
+  text-align: center;
+  bottom: -20px;
+  left: 0px;
+  width: 100%;
+  font-size: 12px;
+  color: #000;
+}
+.slide .content .actions img {
+  height: 100%;
+}
+
+.gallery {
+  text-align: center;
+  overflow: auto;
+}
+.gallery .item {
+  display: inline-block;
+  padding: 40px;
+  margin: 10px;
+}
+.gallery img {
+  height: 40px;
+}
+
+/* Portrait and Landscape */
+@media only screen and (max-device-width: 736px) {
+  body {
+    padding-top: 0px;
+  }
+
+  .slide.background1 .hand {
+    display: none;
+  }
+  .slide.background-press {
+    padding-bottom: 100px;
+    background-size: 70% auto;
+  }
+  .slide .content {
+    padding: 20px 20px 20px 20px;
+  }
+
+  .meatless-logo {
+    font-size: 42px;
+    margin: 0px;
+  }
+  .meatless-logo img {
+    height: 60px;
+    position: relative;
+    top: 19px;
+  }
+
+  .gallery .item {
+    display: inline-block;
+    padding: 40px;
+    margin: 0px 0px 10px 0px;
+    width: 100%;
+  }
+  .gallery img {
+    height: 40px;
+  }
+
+  .toolbar {
+    position: relative;
+  }
+  .toolbar ul {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
