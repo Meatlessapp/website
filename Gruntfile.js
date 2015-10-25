@@ -99,7 +99,31 @@ module.exports = function(grunt) {
           keepalive: true
         }
       }
-    }
+    },
+    'gh-pages': {
+      options: {
+        base: 'out'
+      },
+      src: ['**']
+    },
+    copy: {
+      main: {
+        files: [
+          {
+            expand: true,
+            cwd: 'src/',
+            src: [
+              '*.html',
+              'styles/css/*.css',
+              'styles/images/**/**.*',
+              'bower_components/**/**.*'
+            ],
+            dest: 'out/'
+          }
+        ],
+      },
+    },
+    clean: ["out/"]
   });
 
   // These plugins provide necessary tasks.
@@ -110,13 +134,15 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-gh-pages');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
-  // Default task.
-  grunt.registerTask('default', [
-    'jshint',
-    'qunit',
-    'concat',
-    'uglify'
+  grunt.registerTask('deploy', [
+    'clean',
+    'sass',
+    'copy',
+    'gh-pages'
   ]);
 
   grunt.registerTask('serve', [

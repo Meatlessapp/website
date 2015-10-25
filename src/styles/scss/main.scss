@@ -85,6 +85,10 @@ body {
             background-size: contain;
             padding-left: 40%;
         }
+
+        .content {
+            -webkit-animation: fadeInUp 1s;
+        }
     }
 
     &.background-press {
