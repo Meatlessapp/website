@@ -140,12 +140,68 @@ body {
     .item {
         display: inline-block;
         padding: 40px;
-        background: #FFF;
-        box-shadow: 0 0 5px #000;
         margin: 10px;
     }
 
     img {
         height: 40px;
+    }
+}
+
+
+/* Portrait and Landscape */
+@media only screen
+  and (max-device-width: 736px) {
+
+    body {
+        padding-top: 0px;
+    }
+
+    .slide {
+
+        &.background1 {
+            .hand {
+                display: none;
+            }
+        }
+
+        &.background-press {
+            padding-bottom: 100px;
+            background-size: 70% auto;
+        }
+
+        .content {
+            padding: 20px 20px 20px 20px;
+        }
+    }
+
+    .meatless-logo {
+        font-size: 42px;
+        margin: 0px;
+        img {
+            height: 60px;
+            position: relative;
+            top: 19px;
+        }
+    }
+
+    .gallery {
+        .item {
+            display: inline-block;
+            padding: 40px;
+            margin: 0px 0px 10px 0px;
+            width: 100%;
+        }
+
+        img {
+            height: 40px;
+        }
+    }
+
+    .toolbar {
+        position: relative;
+        ul {
+            display: none;
+        }
     }
 }
